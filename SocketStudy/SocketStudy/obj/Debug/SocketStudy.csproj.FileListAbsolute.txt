@@ -1,0 +1,7 @@
+D:\code_test\SocketStudy\SocketStudy\bin\Debug\SocketStudy.exe.config
+D:\code_test\SocketStudy\SocketStudy\bin\Debug\SocketStudy.exe
+D:\code_test\SocketStudy\SocketStudy\bin\Debug\SocketStudy.pdb
+D:\code_test\SocketStudy\SocketStudy\obj\Debug\SocketStudy.csprojAssemblyReference.cache
+D:\code_test\SocketStudy\SocketStudy\obj\Debug\SocketStudy.csproj.CoreCompileInputs.cache
+D:\code_test\SocketStudy\SocketStudy\obj\Debug\SocketStudy.exe
+D:\code_test\SocketStudy\SocketStudy\obj\Debug\SocketStudy.pdb

@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ClientState.cs" />
+    <Compile Include="EventHandler.cs" />
+    <Compile Include="MsgHandler.cs" />
+    <Compile Include="MainClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

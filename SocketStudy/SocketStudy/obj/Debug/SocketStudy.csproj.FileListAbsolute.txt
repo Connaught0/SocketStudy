@@ -5,3 +5,11 @@ D:\code_test\SocketStudy\SocketStudy\obj\Debug\SocketStudy.csprojAssemblyReferen
 D:\code_test\SocketStudy\SocketStudy\obj\Debug\SocketStudy.csproj.CoreCompileInputs.cache
 D:\code_test\SocketStudy\SocketStudy\obj\Debug\SocketStudy.exe
 D:\code_test\SocketStudy\SocketStudy\obj\Debug\SocketStudy.pdb
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\bin\Debug\SocketStudy.exe.config
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\bin\Debug\SocketStudy.exe
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\bin\Debug\SocketStudy.pdb
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Debug\SocketStudy.csproj.AssemblyReference.cache
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Debug\SocketStudy.csproj.SuggestedBindingRedirects.cache
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Debug\SocketStudy.csproj.CoreCompileInputs.cache
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Debug\SocketStudy.exe
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Debug\SocketStudy.pdb

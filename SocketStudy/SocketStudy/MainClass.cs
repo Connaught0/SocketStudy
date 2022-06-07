@@ -5,18 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Reflection;
 
 
 namespace SocketStudy
 {
-    class Program
+    class MainClass
     {
-        class ClientState {
-            public Socket socket;
-            public byte[] readBuff = new byte[1024];
-        }
+     
         static Socket listenfd;//监听
-        static Dictionary<Socket, ClientState> Clients = new Dictionary<Socket, ClientState>();
+        public static Dictionary<Socket, ClientState> Clients = new Dictionary<Socket, ClientState>();
 
 
         static void Main(string[] args)
@@ -96,6 +94,11 @@ namespace SocketStudy
             }
             catch(SocketException ex)
             {
+                MethodInfo mei = typeof ( EventHandler ).GetMethod ( "OnDisconnect" );
+                object[] ob = { state };
+                mei.Invoke(null, ob);
+
+
                 clientfd.Close();
                 Clients.Remove(clientfd);
                 Console.WriteLine("Receive SocketException" + ex.ToString());
@@ -103,6 +106,10 @@ namespace SocketStudy
             }
             if (count == 0)
             {
+                MethodInfo mei = typeof ( EventHandler ).GetMethod ( "OnDisconnect" );
+                object[] ob = { state };
+                mei.Invoke ( null, ob );
+
                 clientfd.Close();
                 Clients.Remove(clientfd);
                 Console.WriteLine("Socket Close");
@@ -110,12 +117,25 @@ namespace SocketStudy
             }
             string recvStr = System.Text.Encoding.Default.GetString(state.readBuff, 0, count);
             Console.WriteLine("Receive" + recvStr);
-            string sendStr = clientfd.RemoteEndPoint.ToString()+":" + recvStr;
+            string[] split=recvStr.Split('|');
+            string msgName = split[0];
+            string msgArgs = split[1];
+            string funName = "Msg" + msgName;
+            MethodInfo mi = typeof ( MsgHandler ).GetMethod ( funName );
+            object[] o ={ state,msgArgs};
+            mi.Invoke(null, o); 
+            
+
+            /*  Echo Boardcast
+            //string sendStr = clientfd.RemoteEndPoint.ToString()+":" + recvStr;
+            string sendStr =  recvStr;
+
             byte[] sendBytes = System.Text.Encoding.Default.GetBytes(sendStr);
             foreach (ClientState cs in Clients.Values)
             {
                 cs.socket.Send(sendBytes);
             }
+            */
             return true;
 
         }
@@ -187,5 +207,10 @@ namespace SocketStudy
             }
         }
         #endregion
+        public static void Send(ClientState cs,string msg)
+        {
+            byte[] sendBytes = System.Text.Encoding.Default.GetBytes(msg);
+            cs.socket.Send(sendBytes);
+        }
     }
 }

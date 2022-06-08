@@ -1,0 +1,8 @@
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\bin\Release\SocketStudy.exe.config
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\bin\Release\SocketStudy.exe
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\bin\Release\SocketStudy.pdb
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.csproj.AssemblyReference.cache
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.csproj.SuggestedBindingRedirects.cache
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.csproj.CoreCompileInputs.cache
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.exe
+E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.pdb

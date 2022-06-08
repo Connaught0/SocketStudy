@@ -11,6 +11,12 @@ namespace SocketStudy
         public static void OnDisconnect(ClientState cs)
         {
             Console.WriteLine("OnDisconnect"+cs.socket.RemoteEndPoint.ToString());
+            string desc = cs.socket.RemoteEndPoint.ToString ( );
+            string sendStr = "Leave|" + desc + ",";
+            foreach(ClientState c in MainClass.Clients.Values)
+            {
+                MainClass.Send ( c, sendStr );
+            }
         }
 
     }

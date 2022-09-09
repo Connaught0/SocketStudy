@@ -6,3 +6,11 @@ E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.
 E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.csproj.CoreCompileInputs.cache
 E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.exe
 E:\CodeStudy\Socket\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.pdb
+E:\CodeStudy\SocketStudy\SocketStudy\SocketStudy\bin\Release\SocketStudy.exe.config
+E:\CodeStudy\SocketStudy\SocketStudy\SocketStudy\bin\Release\SocketStudy.exe
+E:\CodeStudy\SocketStudy\SocketStudy\SocketStudy\bin\Release\SocketStudy.pdb
+E:\CodeStudy\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.csproj.AssemblyReference.cache
+E:\CodeStudy\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.csproj.SuggestedBindingRedirects.cache
+E:\CodeStudy\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.csproj.CoreCompileInputs.cache
+E:\CodeStudy\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.exe
+E:\CodeStudy\SocketStudy\SocketStudy\SocketStudy\obj\Release\SocketStudy.pdb

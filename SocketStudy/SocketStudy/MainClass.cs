@@ -22,7 +22,9 @@ namespace SocketStudy
             Console.WriteLine("Start---------");
             //socket
             listenfd = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPAddress ipdr = IPAddress.Parse("127.0.0.1");
+            //IPAddress ipdr = IPAddress.Parse( "172.17.16.4" );
+            IPAddress ipdr = IPAddress.Parse ( "192.168.56.1" );
+            Console.WriteLine ( ipdr );
             IPEndPoint ipEp = new IPEndPoint(ipdr, 8888);
             listenfd.Bind(ipEp);
 
@@ -87,11 +89,13 @@ namespace SocketStudy
         private static bool ReadClientfd(Socket clientfd)
         {
             ClientState state = Clients[clientfd];
+            //在这里报出的错误可能是后面的数据处理出错给出的信息
             int count = 0;
             try
             {
                 count = clientfd.Receive(state.readBuff);
             }
+            
             catch(SocketException ex)
             {
                 MethodInfo mei = typeof ( EventHandler ).GetMethod ( "OnDisconnect" );
@@ -104,6 +108,7 @@ namespace SocketStudy
                 Console.WriteLine("Receive SocketException" + ex.ToString());
                 return false;
             }
+            
             if (count == 0)
             {
                 MethodInfo mei = typeof ( EventHandler ).GetMethod ( "OnDisconnect" );
@@ -117,14 +122,14 @@ namespace SocketStudy
             }
             string recvStr = System.Text.Encoding.Default.GetString(state.readBuff, 0, count);
             Console.WriteLine("Receive" + recvStr);
-            string[] split=recvStr.Split('|');
-            string msgName = split[0];
-            string msgArgs = split[1];
-            string funName = "Msg" + msgName;
-            MethodInfo mi = typeof ( MsgHandler ).GetMethod ( funName );
-            object[] o ={ state,msgArgs};
-            mi.Invoke(null, o); 
-            
+            //string[] split=recvStr.Split('|');
+            //string msgName = split[0];
+            //string msgArgs = split[1];
+            //string funName = "Msg" + msgName;
+            //MethodInfo mi = typeof ( MsgHandler ).GetMethod ( funName );
+            //object[] o ={ state,msgArgs};
+            //mi.Invoke(null, o); 
+            Send(state, recvStr);
 
             /*  Echo Boardcast
             //string sendStr = clientfd.RemoteEndPoint.ToString()+":" + recvStr;

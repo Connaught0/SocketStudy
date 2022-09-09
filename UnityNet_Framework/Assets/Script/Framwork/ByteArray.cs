@@ -17,7 +17,7 @@ public class ByteArray
     public byte[] bytes;
     public int readIdx = 0;
     private int capacity = 0;
-    private int remain { get { return capacity - writeIdx; } }
+    public int remain { get { return capacity - writeIdx; } }
 
     public int writeIdx = 0;
     public int length
@@ -62,7 +62,7 @@ public class ByteArray
         
     }
 
-    private void moveBytes( )
+    public void moveBytes( )
     {
         Array.Copy ( bytes, readIdx, bytes, 0, length );
         writeIdx = length;
